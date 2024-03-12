@@ -1,0 +1,159 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body{
+    overflow: hidden;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}
+
+/* ====================================== 
+            Backgound Video
+=========================================*/
+
+.bg_video{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: -10;
+    filter: blur(2px);
+    
+}
+@media (min-aspect-ratio: 16/9){
+    .bg_video{
+        width: 100%;
+        height: auto;
+    }
+}
+@media (max-aspect-ratio: 16/9){
+    .bg_video{
+        width: auto;
+        height: 100%;
+    }
+}
+
+
+/* ====================================== 
+         Manange Responsive
+=========================================*/
+@media only screen and (max-width: 750px){
+    body{
+        background-color: #ff8800;
+    }
+    .bg_video{
+        display: none;
+    }
+    main {
+       align-items: normal !important;
+    }
+    .main_card {
+        border-radius: 0px !important;
+    }
+    .logo_and_brandName > a > span{
+        font-size: 1.8rem !important;
+    }
+}
+
+
+/* ====================================== 
+            Main content card
+=========================================*/
+
+main {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.main_card {
+    /* width: 600px;
+    height: 600px; */
+    background-color: #ff8800;
+    overflow: hidden;
+    padding: 30px 20px;
+    border-radius: 20px;
+}
+
+.logo_and_brandName {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.logo_and_brandName > a {
+    text-decoration: none;
+    color: black;
+}
+
+.logo_and_brandName > a > img{
+    width: 100px;
+    height: 100px;
+}
+
+.logo_and_brandName > a > span{
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+
+/* ====================================== 
+            Social Media Handles
+=========================================*/
+.social_media_handles > a {
+    text-decoration: none;
+    margin: 5px;
+}
+
+.social_media_handles > a > button {
+    width: 100%;
+    height: 30px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 20px;
+    border: 2px solid black;
+}
+
+.social_media_handles > a > button:hover {
+    background-color: black;
+    color: wheat;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+}
+
+.social_media_handles > a > button > div {  
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    overflow: hidden;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.social_media_handles > a > button > div > img {
+    width: 30px;
+    height: 30px;
+  
+}
+
+.social_media_handles > a > button > span {
+    font-size: 1rem;
+    margin-left: 20px;
+    font-weight: bold;
+}
